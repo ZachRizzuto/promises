@@ -25,7 +25,6 @@ const second = (val) => {
 // In test js if i log the second res it gives me 10 but this throws an unhandled error because it gets 3
 
 export const handlePromise = first()
-  .then(val => val)
   .then(num => second(num))
   .then(newNum => {
     console.log(newNum);

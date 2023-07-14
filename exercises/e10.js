@@ -77,7 +77,7 @@ export const handlePromise3 = (proms) => {
  * The value of newPromiseArr MUST have more than one promise in the array!
  */
 
-export const newPromiseArr = promiseArr.filter(handlePromise2);
+export const newPromiseArr = promiseArr.filter((prom) => prom != promise2 && prom != promise3);
 
 // Do NOT refactor or update handlePromise4 function, it's all set to work
 export const handlePromise4 = (arr) => {

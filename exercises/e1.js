@@ -19,9 +19,7 @@ export const getPromise = new Promise((res) => {
 	setTimeout(() => {
 		res('The PROMISE was RESOLVED');
 	}, 1000)
-});
-getPromise
-	.then((onFulfilled) => console.log(onFulfilled));
+}).then((onFulfilled) => console.log(onFulfilled));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"

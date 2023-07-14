@@ -58,9 +58,7 @@ export const handlePromise = (prom) => {
   // Your code goes here...
   return prom
     .then((val) => val)
-    .catch((err) => {
-      err.message ? onReject(err) : err;
-    })
+    .catch((err) => err.message ? onReject(err) : err);
 };
 
 // === TEST YOURSELF ===

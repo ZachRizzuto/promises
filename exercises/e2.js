@@ -17,8 +17,10 @@
 
 export const getPromise = (bool) => {
   // Your code goes here...
-  return new Promise((onFulfilled, onRejected) => {
-    bool ? onFulfilled('The PROMISE was RESOLVED') :  onRejected('The PROMISE was REJECTED');
+  return new Promise((resolve, reject) => {
+    bool 
+    ? resolve('The PROMISE was RESOLVED') 
+    :  reject('The PROMISE was REJECTED');
   });
 };
 
@@ -34,7 +36,7 @@ export const getPromise = (bool) => {
 export const handlePromise = (promise) => {
   // Your code goes here...
   return promise
-    .then((onFulfilled) => onFulfilled)
+    .then((val) => val)
     .catch(() => 'Uh Oh');
 };
 

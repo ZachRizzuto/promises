@@ -26,7 +26,7 @@ const handlePromise3 = (proms) => {
     .catch((err) => err);
 }
 
-const newPromiseArr = promiseArr.filter(handlePromise2);
+const newPromiseArr = promiseArr.filter((prom) => prom != promise2 && prom != promise3);
 
 const handlePromise4 = (arr) => {
   return Promise.race(arr)
@@ -34,4 +34,4 @@ const handlePromise4 = (arr) => {
     .catch((e) => e);
 };
 
-console.log(handlePromise4(newPromiseArr));
+console.log(newPromiseArr);

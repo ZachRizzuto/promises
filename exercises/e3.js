@@ -16,7 +16,9 @@
  */
 export const getPromise = (arg) => {
   // Your code goes here...
-  return Number.isInteger(arg) ? new Promise((res) => res(arg)) : 0;
+  return Number.isInteger(arg) 
+  ? new Promise((res) => res(arg)) 
+  : 0;
 };
 
 /**

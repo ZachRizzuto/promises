@@ -39,7 +39,9 @@ export function alwaysThrows() {
 
 export function onReject(arg) {
   // Your code goes here...
-  typeof arg === 'object' ? console.log(arg.message) : console.log(arg);
+  return arg.message 
+    ? console.log(arg.message) 
+    : console.log(arg);
 }
 
 /**
@@ -65,15 +67,15 @@ export function onReject(arg) {
 
 // Your code goes here...
 export const promise = Promise.resolve(iterate(1))
-  .then(iterate(2))
-  .then(iterate(3))
-  .then(iterate(4))
-  .then(iterate(5))
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
   .then(alwaysThrows)
-  .then(iterate(6))
-  .then(iterate(7))
-  .then(iterate(8))
-  .then(iterate(9))
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
   .catch((err) => onReject(err));
 
 
